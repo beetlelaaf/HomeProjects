@@ -239,4 +239,50 @@ img:active:not(#logo) {
 
 .info::-webkit-scrollbar {
     display: none;
-  }
+}
+
+/*screen size*/
+
+@media only screen and (max-width: 1900px) {
+    .column {
+        flex: 25%;
+        max-width: 23%;
+   }
+
+   #title {
+    font-size: 18px;
+   }
+   
+}
+
+@media only screen and (max-width: 1400px) {
+    #title {
+        text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    #logo {
+        display: none;
+    } 
+
+    a {
+        text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .nav:hover:not(.actief) {
+        background: var(--background-alt);
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .column {
+        flex: 50%;
+        max-width: 47%;
+   }
+}
+
+
