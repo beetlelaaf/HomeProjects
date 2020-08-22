@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="colors.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="icon" href="siteimages/logo-default.svg">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="script.js"></script>
+    <title>Ecchi's Art Collection</title>
+  </head>
+  <body class="container" onload="loadJSON()">
+    <div class="content">
+        <div class="navigation">
+            <img id="logo" src="siteimages/logo-blue.svg" alt="Icon Site" width="50px" height="50px">
+            <ul>
+                <li class="nav actief" id="nav1" onclick="hidetext1()"><i class="material-icons">dashboard</i><a>Dashboard</a></li>
+                <li class="nav" id="nav2" onclick="hidetext2()"><i class="material-icons">tv</i><a>Digital</a></li>
+                <li class="nav" id="nav3" onclick="hidetext3()"><i class="material-icons">create</i><a>Traditional</a></li>
+                <li class="nav" id="nav4" onclick="hidetext4()"><i class="material-icons">code</i><a>Options</a></li>
+            </ul>
+            <p id=footer>Copyright @ Beetlelaaf - 2020-2021</p> 
+        </div>
+        <div id="main1" class="hidden active">
+            <h1>Dashboard</h1>
+            <div class="row">
+                <div class="column">
+                  <img class="img" src="">
+                  <img class="img" src="">
+                  <img class="img" src="">
+                  <img class="img" src="">
+                  <img class="img" src="">
+                  <img class="img" src="">
+                  <img class="img" src="">
+                  <img class="img" src="">
+                </div>
+                <div class="column">
+                  <img class="img" src="">
+                  <img class="img" src="">
+                  <img class="img" src="">
+                  <img class="img" src="">
+                  <img class="img" src="">
+                  <img class="img" src="">
+                  <img class="img" src="">
+                  <img class="img" src="">
+                </div>
+                <div class="column">
+                  <img class="img" src="">
+                  <img class="img" src="">
+                  <img class="img" src="">
+                  <img class="img" src="">
+                  <img class="img" src="">
+                  <img class="img" src="">
+                  <img class="img" src="">
+                  <img class="img" src="">
+                </div>
+                <div class="column">
+                  <img class="img" src="">
+                  <img class="img" src="">
+                  <img class="img" src="">
+                  <img class="img" src="">
+                  <img class="img" src="">
+                  <img class="img" src="">
+                  <img class="img" src="">
+                  <img class="img" src="">
+                </div>
+              </div>
+        </div>
+
+        <div id="main2" class="hidden">
+            <h1>Digital Art</h1>
+            <div class="row">
+                <div class="column">
+                  <img src="images/1.png">
+                  <img src="images/2.png">
+                  <img src="images/9.png">
+                  <img src="">
+                </div>
+                <div class="column">
+                  <img src="images/3.png">
+                  <img src="images/4.png">
+                  <img src="images/19.png">
+                  <img src="">
+                </div>
+                <div class="column">
+                  <img src="images/5.png">
+                  <img src="images/6.png">
+                  <img src="">
+                  <img src="">
+                </div>
+                <div class="column">
+                  <img src="images/7.png">
+                  <img src="images/8.png">
+                  <img src="">
+                  <img src="">
+                </div>
+              </div>     
+        </div>
+        <div id="main3" class="hidden">
+            <h1>Traditional Art</h1>
+            <div class="row">
+                <div class="column">
+                  <img src="images/10.jpg">
+                  <img src="images/11.jpg">
+                  <img src="">
+                  <img src="">
+                </div>
+                <div class="column">
+                  <img src="images/12.jpg">
+                  <img src="images/13.jpg">
+                  <img src="">
+                  <img src="">
+                </div>
+                <div class="column">
+                  <img src="images/14.jpg">
+                  <img src="images/15.jpg">
+                  <img src="">
+                  <img src="">
+                </div>
+                <div class="column">
+                  <img src="images/16.jpg">
+                  <img src="images/17.png">
+                  <img src="">
+                  <img src="">
+                </div>
+              </div>
+        </div>
+        <div id="main4" class="hidden">
+            <h1>Options</h1>
+          <div class="options">
+            <p>Theme:</p>
+            <div class="bnt-group">
+              <button class="bnt-theme" id="colortheme" onclick="colorTheme();">Color</button>
+              <button class="bnt-theme" id="lighttheme" onclick="lightTheme();">Light</button>
+              <button class="bnt-theme" id="bluetheme" onclick="blueTheme();">Blue</button>
+            </div>
+          </div>            
+        </div>
+    </div>
+    <div class="content2" onmouseover="showAbout()" onmouseout="hideAbout()">
+      <p id="title">About</p>
+      <hr></hr>
+      <div class="info">
+        <div class="card hide">
+          <p class="subtitle">Ecchi</p>
+          <p>Age: 18</p>
+          <p>Hi I'm troll321 but you can call me ecchi.</p>
+          <p>I'm 18 and live in Portugal and I love drawing, gaming and anime.</p>
+            <div class="skillset">
+              <p>Traditional</p>
+              <div class="container">
+                <div class="skills ecchi-t">70%</div>
+              </div>
+              <p>Digital</p>
+              <div class="container">
+                <div class="skills ecchi-d">50%</div>
+              </div>
+              <p>Modeling</p>
+              <div class="container">
+                <div class="skills ecchi-m">0%</div>
+              </div>
+            </div>
+          <div class="mediabuttons">
+            <a href="https://www.instagram.com/_troll321__/" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-twitter disabled"></a>
+            <a href="#" class="fa fa-youtube disabled"></a>
+          </div>
+        </div>
+
+        <div class="card hide">
+          <p class="subtitle">SnapCrackle</p>
+          <p>Age: 19</p>
+          <p>Unknown Entity</p>
+          <p>This is an Unknows Entity<br>We don't know who it is<br>
+            But we'll find out soon</p>
+          <div class="skillset">
+            <p>Traditional</p>
+            <div class="container">
+              <div class="skills snap-t">90%</div>
+            </div>
+            <p>Digital</p>
+            <div class="container">
+              <div class="skills snap-d">10%</div>
+            </div>
+            <p>Modeling</p>
+            <div class="container">
+              <div class="skills snap-m">0%</div>
+            </div>
+          </div>
+          <div class="mediabuttons">
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-youtube"></a>
+          </div>
+        </div> 
+
+        <div class="card hide">
+          <p class="subtitle">Unknown</p>
+          <p>Age: ?</p>
+          <p>Unknown Entity</p>
+          <p>This is an Unknows Entity<br>We don't know who it is<br>
+            But we'll find out soon</p>
+          <div class="mediabuttons">
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-youtube"></a>
+          </div>
+        </div> 
+
+        <div class="card hide">
+          <p class="subtitle">Unknown</p>
+          <p>Age: ?</p>
+          <p>Unknown Entity</p>
+          <p>This is an Unknows Entity<br>We don't know who it is<br>
+            But we'll find out soon</p>
+          <div class="mediabuttons">
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-youtube"></a>
+          </div>
+        </div>
+
+        <div class="card hide creator">
+          <p class="subtitle creator">Beetlelaaf</p>
+          <p>Age: 19</p>
+          <p>Creator of the website.</p>
+          <p>Site is still a work-in-progress.</p><br>
+          <div class="skillset creator">
+            <p>HTML</p>
+            <div class="container">
+              <div class="skills html">80%</div>
+            </div>
+            <p>CSS</p>
+            <div class="container">
+              <div class="skills css">50%</div>
+            </div>
+            <p>JS</p>
+            <div class="container">
+              <div class="skills js">30%</div>
+            </div>
+          </div>
+          <div class="mediabuttons">
+            <a href="https://www.instagram.com/unknown_heights/" class="creator fa fa-instagram"></a>
+            <a href="#" class="creator fa fa-twitter disabled"></a>
+            <a href="#" class="creator fa fa-youtube disabled"></a>
+          </div>
+        </div> 
+      </div>
+    </div>
+  </body>
+</html>

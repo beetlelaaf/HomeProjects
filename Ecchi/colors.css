@@ -1,0 +1,29 @@
+:root {
+    --background-main: #42455a;
+    --background-sub: #383a4d;
+    --background-sub2: #36427a;
+    --background-alt: #404f92;
+    --background-card: #404f92;
+    --scrollbar: #252833; 
+    --text-main: #ffffff;
+    --text-alt: #000000;
+    --text-footer: #9e9e9e;
+
+    --skill-bar: #FF3F60;
+
+    --twitter: #FF3F60; 
+    --youtube: #FF3F60;
+    --facebook: #FF3F60;   
+}
+
+.html {width: 90%; background-color: #3E50B4; color: black}
+.css {width: 70%; background-color: #3E50B4; color: black}
+.js {width: 50%; background-color: #3E50B4; color: black}
+
+.ecchi-t {width: 70%; background-color: var(--skill-bar); color: black}
+.ecchi-d {width: 50%; background-color: var(--skill-bar); color: black}
+.ecchi-m {width: 0%; background-color: var(--skill-bar); color: black}
+
+.snap-t {width: 90%; background-color: var(--skill-bar); color: black}
+.snap-d {width: 10%; background-color: var(--skill-bar); color: black}
+.snap-m {width: 0%; background-color: var(--skill-bar); color: black}

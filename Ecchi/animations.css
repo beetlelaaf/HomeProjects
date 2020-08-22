@@ -1,0 +1,242 @@
+
+/* Social Media Buttons*/
+.mediabuttons {
+    position: absolute; 
+    bottom: 10px;
+    left: 10%;
+    right: 10%;
+}
+
+.fa {
+    width: 15px;
+    height: 15px;
+    padding: 20px;
+    font-size: 30px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+  
+.fa:hover:not(.disabled) {
+    transform-origin: center;
+    transform: scale(1.15);
+
+}
+  
+.fa-twitter {
+      background: var(--twitter);
+      color: var(--text-main);
+}
+  
+.fa-youtube {
+      background: var(--youtube);
+      color: var(--text-main);
+}
+    
+.fa-instagram {
+      background: var(--facebook);
+      color: var(--text-main);
+}
+
+/*Animation for hiding a showing content*/
+
+.hidden {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+.show {
+    opacity: 1;
+    transition: .5s ease;
+    transition-delay: .3s;   
+}
+
+.hide {
+    opacity: 0;
+    transition: .1s ease; 
+}
+
+.disabled {
+    opacity: 0.3;
+}
+
+/*Styling for the navigation bar*/ 
+
+.navigation {
+    height: 100%;
+    width: 10%; 
+    position: fixed;
+    z-index: 1;
+    top: 0; 
+    left: 0;
+    background-color: var(--background-sub);  
+}
+
+.navigation ul {
+    list-style-type: none;
+    padding: 20% 0 0 0;
+    margin: 0;
+}
+
+.navigation li {
+    text-align: center;
+    padding: 20px 0 20px 0;
+}
+
+.navigation a {
+    text-decoration: none;
+    font-size: 20px;
+    color: var(-text-main);
+    display: block;
+}
+
+/*The look of main content*/
+
+.content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    font-size: 15px;
+    overflow: auto;
+    background-color: var(--background-main)
+}
+
+/*
+    Look of the About content of the page
+    Style of the info space
+    Style of the info card
+*/
+
+.content2 {
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    position: fixed;
+    width: 5%;
+    height: 100vh;
+    left: 95%;
+    text-align: center;
+    background-color: var(--background-sub);
+    transition: .5s ease;
+}
+
+.content2:hover{
+    width: 15%;
+    left: 85%;
+}
+
+.info {
+    margin: 0;
+    padding: 0;
+    width: 15%;
+    height: 95vh;
+    position: fixed;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.card {
+    margin: 0;
+    padding-top: 10%;
+    background-color: var(--background-card);
+    width: 100%;
+    height: 400px;
+    position: relative;
+}
+
+.skillset{
+    margin: 0;
+    text-align: left;
+    padding: 5px;
+}
+
+.container:not(.creator) {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: var(--background-sub2);
+}
+
+.creator .container {
+    width: 100%;
+    background-color: #c9304a;
+}
+
+.creator {
+    background-color: var(--skill-bar);
+}
+
+.creator.fa {
+    background-color: #3E50B4;
+}
+
+/*  
+    Styling and arrangement for the images (gallery)
+    Magnify the image a bit when hovering over it
+    Magnify the image by 2 when holding the left mouse button
+*/
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+} 
+
+.column {
+    flex: 25%;
+    max-width: 24.4%;
+    padding: 0 4px;
+}
+  
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+
+#logo {
+    margin: 30px 0px 0px 60px;
+    width: 70px;
+    height: 70px;
+    transform-origin: 50% 50%;
+}
+
+img:not(#logo) {
+    z-index: 1;
+    transition-duration: 0.5s;
+}
+
+img:hover:not(#logo){
+    transform-origin: center;
+    transform: scale(1.15);
+    z-index: 2;
+}
+
+img:active:not(#logo) {
+    z-index: 2;
+    transform: scale(2.0);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Scroll bar*/
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbar); 
+}
+
+::-webkit-scrollbar-corner {
+    display: none;
+}
+
+.info::-webkit-scrollbar {
+    display: none;
+  }

@@ -1,0 +1,115 @@
+
+* {
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: arial;
+}
+
+body.container {
+    background-color: var(--background-main);
+    padding: 0;
+    margin: 0; 
+    color: var(--text-main);
+}
+
+h1{
+    font-size: 60px;
+    font-family: 'Amatic SC', cursive;
+    text-align: center;
+}
+
+h1.dash {
+     margin: 0;
+}
+
+h3 {
+    text-align: left;
+    margin-left: 10%;
+}
+
+p {
+    width: 100%;
+    font-size: 15px;
+    margin: 5px;
+}
+
+#main1, #main2, #main3, #main4 {
+    margin: 0;
+    padding: 0;
+    margin-left: 15%;
+    width: 75%;
+}
+
+#title {
+    font-size: 25px;
+}
+
+.subtitle {
+    margin: 0;
+    font-size: 20px;
+}
+
+.nav {
+    width: 100%;
+    transition: width .5s;
+    transition: ease .5s;
+}
+
+.nav.actief {
+    background: var(--background-alt);
+    width: 110%;
+}
+
+.nav:hover:not(.actief) {
+    background: var(--background-alt);
+    width: 220px;
+}
+
+.bnt-group {
+    width: 250px;
+}
+
+.bnt-theme {
+    width: 80px;
+    height: 40px;
+    font-size: 14px;
+    border-style: none;
+    outline: none;
+    box-shadow: none;
+}
+
+#colortheme {
+    background-color: #FF3F60;
+    color: white;
+}
+
+#lighttheme {
+    background-color: #c7c7c7;
+    color: black;
+}
+
+#bluetheme {
+    background-color: #404f92;
+    color: #ffffff;
+}
+
+i {
+    float: left;
+    padding-left: 10px;
+}
+
+#footer {
+    position: fixed;
+    color: var(--text-sub);
+    font-size: 10px;
+    bottom: 5px;
+    left: 10px;
+}
+
+
+
+
