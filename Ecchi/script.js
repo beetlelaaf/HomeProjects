@@ -111,22 +111,49 @@ function hidetext4() {
     }
 }
 
-function showAbout() {
-    let x = document.getElementsByClassName("card");
-    for(i=0; i<x.length; i++) {
-        x[i].classList.remove("hide");
-        x[i].classList.add("show");
+function hidetext5() {
+    let x = document.getElementsByClassName("content2");
+    let y = document.getElementById("nav5");
+    if(x[0].classList.contains("active")) {}
+    else {
+        let currActive = document.getElementsByClassName("active");
+        currActive[0].classList.remove("active");
+        x[0].classList.add("active");
+        let z = document.getElementsByClassName("card");
+        for(i=0; i<z.length; i++) {
+            z[i].classList.remove("show");
+            z[i].classList.add("hide");
+        }
     }
-    
+
+    if(!y.classList.contains("actief")) {
+        let currActief = document.getElementsByClassName("nav actief");
+        currActief[0].classList.remove("actief");
+        y.classList.add("actief");
+        let z = document.getElementsByClassName("card");
+        for(i=0; i<z.length; i++) {
+            z[i].classList.remove("hide");
+            z[i].classList.add("show");
+        }
+    }
+
+    // if(x[0].classList.contains("active2")) {
+    //     x[0].classList.remove("active2");
+    //     let y = document.getElementsByClassName("card");
+    //     for(i=0; i<y.length; i++) {
+    //         y[i].classList.remove("show");
+    //         y[i].classList.add("hide");
+    //     }
+    // } else {
+    //     x[0].classList.add("active2");
+    //     let z = document.getElementsByClassName("card");
+    //     for(i=0; i<z.length; i++) {
+    //         z[i].classList.remove("hide");
+    //         z[i].classList.add("show");
+    //     }
+    // }   
 }
 
-function hideAbout() {
-    let x = document.getElementsByClassName("card");
-    for(i=0; i<x.length; i++) {
-        x[i].classList.remove("show");
-        x[i].classList.add("hide");
-    }
-}
 
 function colorTheme() {
     document.getElementById("logo").src = "siteimages/logo-default.svg";

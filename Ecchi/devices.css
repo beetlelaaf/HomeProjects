@@ -1,11 +1,20 @@
-@media only screen and (max-width: 1600px) {
-    .content2:hover{
-        width: 25vw;
-        left: 75%;
-    }
+@media only screen and (max-width: 1900px) {
+    .column {
+        flex: 25%;
+        max-width: 23%;
+   }
 
-    .info {
-        width: 25vw;
+   #title {
+    font-size: 18px;
+   }
+   
+}
+
+@media only screen and (max-width: 1600px) {
+    img:hover:not(#logo){
+        transform-origin: center;
+        transform: scale(2);
+        z-index: 2;
     }
 }
 
@@ -34,17 +43,32 @@
         background: var(--background-alt);
         width: 100%;
     }
-}
 
-@media only screen and (max-width: 1000px) {
-    .content2:hover{
-        width: 40vw;
-        left: 60%;
+    .nav.actief {
+        background: var(--background-alt);
+        width: 100%;
+    }
+
+    .content2.active {
+        width: 30vw;
+        left: 70vw;
     }
 
     .info {
-        width: 40vw;
-    }    
+        width: 30vw;
+    } 
+
+}
+
+@media only screen and (max-width: 1000px) {  
+    .content2.active {
+        width: 50vw;
+        left: 50vw;
+    }
+
+    .info {
+        width: 50vw;
+    } 
 }
 
 @media only screen and (max-width: 600px) {
@@ -53,17 +77,12 @@
         max-width: 47%;
     }
 
-    .content2:hover{
-        width: 100vw;
-        left: 0%;
-        
+    .content2.active {
+        width: calc(100vw - 50px);
+        left: 50px;
     }
 
     .info {
-        width: 100vw;
-    }
-
-    .skillset {
-        padding: 0% 15% 0% 15%;
-    }
+        width: calc(100vw - 50px);
+    } 
 }

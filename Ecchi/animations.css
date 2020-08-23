@@ -86,24 +86,26 @@
     padding: 0;
     font-size: 15px;
     position: fixed;
-    width: 5%;
+    width: 0vw;
+    visibility: hidden;
     height: 100vh;
-    left: 95%;
+    left: 100vw;
     text-align: center;
     background-color: var(--background-sub);
     transition: .5s ease;
 }
 
-.content2:hover{
-    width: 15%;
-    left: 85%;
+.content2.active {
+    width: 20vw;
+    visibility: visible;
+    left: 80vw;
 }
 
 .info {
     margin: 0;
     padding: 0;
-    width: 15%;
-    height: 95vh;
+    width: 20vw;
+    height: 100vh;
     position: fixed;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -187,14 +189,6 @@ img:hover:not(#logo){
     z-index: 2;
 }
 
-img:active:not(#logo) {
-    z-index: 2;
-    transform: scale(2.0);
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 /*Scroll bar*/
 
 ::-webkit-scrollbar {
@@ -213,17 +207,4 @@ img:active:not(#logo) {
     display: none;
 }
 
-/*screen size*/
-
-@media only screen and (max-width: 1900px) {
-    .column {
-        flex: 25%;
-        max-width: 23%;
-   }
-
-   #title {
-    font-size: 18px;
-   }
-   
-}
 
