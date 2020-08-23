@@ -1,0 +1,69 @@
+@media only screen and (max-width: 1600px) {
+    .content2:hover{
+        width: 25vw;
+        left: 75%;
+    }
+
+    .info {
+        width: 25vw;
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    #title {
+        text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    a:not(.fa) {
+        text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    #logo {
+        display: none;
+    }
+    
+    .navigation {
+        width: 50px;
+    }
+
+    .nav:hover:not(.actief) {
+        background: var(--background-alt);
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .content2:hover{
+        width: 40vw;
+        left: 60%;
+    }
+
+    .info {
+        width: 40vw;
+    }    
+}
+
+@media only screen and (max-width: 600px) {
+    .column {
+        flex: 50%;
+        max-width: 47%;
+    }
+
+    .content2:hover{
+        width: 100vw;
+        left: 0%;
+        
+    }
+
+    .info {
+        width: 100vw;
+    }
+
+    .skillset {
+        padding: 0% 15% 0% 15%;
+    }
+}
