@@ -2,8 +2,10 @@
 let random_images_array = [];
 
 //Global variables
-let spots = [];
+let divs = [];
+let imgs = [];
 let antidup = [];
+let overlays = [];
 let available = [];
 let root = document.documentElement;
 
@@ -19,7 +21,6 @@ function loadJSON () {
             chooseRandom();
 
             function chooseRandom() {
-                spots = document.getElementsByClassName("img");
                 chooser = Math.floor(Math.random() * available.length);
                 antidup.push(available[chooser]);
                 available.splice(chooser, 1);
@@ -31,8 +32,32 @@ function loadJSON () {
             }
             
             function displayRandom() {
-                for(let i=0; i<spots.length; i++) {
-                    spots[i].src = "images/" + random_images_array[antidup[i]];
+                let colums = document.getElementsByClassName("column");
+                let divspots = document.getElementsByClassName("imgcontainer");
+                let curcol = 0;
+
+                //Add every div element (.container -> .column)
+                for(let i=0; i<antidup.length; i++) {
+                    divs[i] = document.createElement("div");
+                    divs[i].className = "imgcontainer";
+                    if(curcol > 4) {curcol = 0;}
+                    colums[curcol].appendChild(divs[i]);
+                    curcol++;
+                }
+
+                //Add every image element to the div element (img -> div)
+                for(let i=0; i<antidup.length; i++) {
+                    imgs[i] = document.createElement("img");
+                    divspots[i].appendChild(imgs[i]);
+                    overlays[i] = document.createElement("div");
+                    overlays[i].className = "overlay";
+                    divspots[i].appendChild(overlays[i]);
+                }
+
+                //Add the image source to the image element (img.scr -> img)
+                for(let j=0; j<imgs.length; j++) {
+                    imgs[j].src = "images/" + random_images_array[antidup[j]].name;
+                    overlays[j].innerHTML = random_images_array[antidup[j]].artist;
                 }
                 console.log("Spots are filled!");
             }
@@ -47,7 +72,7 @@ function hidetext1() {
     let y = document.getElementById("nav1");
     if(x.classList.contains("active")) {}
     else {
-        let currActive = document.getElementsByClassName("hidden active");
+        let currActive = document.getElementsByClassName("active");
         currActive[0].classList.remove("active");
         x.classList.add("active"); 
     }
@@ -65,7 +90,7 @@ function hidetext2() {
     let y = document.getElementById("nav2");
     if(x.classList.contains("active")) {}
     else {
-        let currActive = document.getElementsByClassName("hidden active");
+        let currActive = document.getElementsByClassName("active");
         currActive[0].classList.remove("active");
         x.classList.add("active"); 
     }
@@ -135,23 +160,7 @@ function hidetext5() {
             z[i].classList.remove("hide");
             z[i].classList.add("show");
         }
-    }
-
-    // if(x[0].classList.contains("active2")) {
-    //     x[0].classList.remove("active2");
-    //     let y = document.getElementsByClassName("card");
-    //     for(i=0; i<y.length; i++) {
-    //         y[i].classList.remove("show");
-    //         y[i].classList.add("hide");
-    //     }
-    // } else {
-    //     x[0].classList.add("active2");
-    //     let z = document.getElementsByClassName("card");
-    //     for(i=0; i<z.length; i++) {
-    //         z[i].classList.remove("hide");
-    //         z[i].classList.add("show");
-    //     }
-    // }   
+    }  
 }
 
 

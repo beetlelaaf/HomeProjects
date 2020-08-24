@@ -11,11 +11,11 @@
 }
 
 @media only screen and (max-width: 1600px) {
-    img:hover:not(#logo){
+    /* img:hover:not(#logo){
         transform-origin: center;
         transform: scale(2);
         z-index: 2;
-    }
+    } */
 }
 
 @media only screen and (max-width: 1400px) {
