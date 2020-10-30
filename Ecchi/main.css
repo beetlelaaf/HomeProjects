@@ -101,7 +101,7 @@ p {
 /* styling the option buttons */
 
 .bnt-group {
-    width: 250px;
+    width: 400px;
 }
 
 .bnt-theme {
@@ -120,12 +120,17 @@ p {
 
 #lighttheme {
     background-color: #c7c7c7;
-    color: black;
+    color: #111111;
 }
 
 #bluetheme {
     background-color: #404f92;
     color: #ffffff;
+}
+
+#spookytheme {
+    background-color: #ff5500;
+    color: #111111;
 }
 
 i {

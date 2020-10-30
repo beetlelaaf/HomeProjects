@@ -33,6 +33,7 @@ function loadJSON () {
             
             function displayRandom() {
                 let colums = document.getElementsByClassName("column");
+                console.log(colums);
                 let divspots = document.getElementsByClassName("imgcontainer");
                 let curcol = 0;
 
@@ -40,7 +41,7 @@ function loadJSON () {
                 for(let i=0; i<antidup.length; i++) {
                     divs[i] = document.createElement("div");
                     divs[i].className = "imgcontainer";
-                    if(curcol > 4) {curcol = 0;}
+                    if(curcol > 3) {curcol = 0;}
                     colums[curcol].appendChild(divs[i]);
                     curcol++;
                 }
@@ -214,4 +215,24 @@ function blueTheme() {
     root.style.setProperty("--youtube", "#FF3F60");
     root.style.setProperty("--facebook", "#FF3F60");
     root.style.setProperty("--skill-bar", "#FF3F60");
+}
+
+function spookyTheme() {
+    document.getElementById("logo").src = "siteimages/logo-spooky.svg";
+    root.style.setProperty("--background-main", "#212121");
+    root.style.setProperty("--background-sub", "#1a1a1a"); 
+    root.style.setProperty("--background-sub2", "#3d3d3d"); 
+    root.style.setProperty("--background-alt", "#ff5500"); 
+    root.style.setProperty("--background-card", "#252525");
+    root.style.setProperty("--scrollbar", "#252833");
+    root.style.setProperty("--text-main", "#ffffff");
+    root.style.setProperty("--text-alt", "#000000");
+    root.style.setProperty("--text-footer", "#9e9e9e");
+    root.style.setProperty("--border-main", "#303030");
+    root.style.setProperty("--twitter", "#ff5500");
+    root.style.setProperty("--youtube", "#ff5500");
+    root.style.setProperty("--facebook", "#ff5500");
+    root.style.setProperty("--skill-bar", "#ff5500");
+    root.style.setProperty("--creator-container", "#3d3d3d");
+
 }

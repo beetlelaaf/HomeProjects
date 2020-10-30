@@ -132,7 +132,7 @@
 
 .creator .container {
     width: 100%;
-    background-color: #c9304a;
+    background-color: var(--creator-container);
 }
 
 .creator {
@@ -164,8 +164,9 @@
     max-width: 24.4%;
     padding: 0 4px;
 }
-  
-.column img {
+
+.imgcontainer img{
+    transition-duration: 0.5s;
     margin-top: 10px;
     vertical-align: middle;
     width: 100%;
@@ -178,7 +179,7 @@
 .overlay {
     position: absolute;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.6); /* Black see-through */
+    background: rgba(0, 0, 0, 0.6);
     color: #f1f1f1;
     width: 100%;
     transition: .5s ease;
@@ -188,7 +189,7 @@
     text-align: center;
 }
 
-.imgcontainer:hover .overlay {
+.imgcontainer:hover .overlay  {
     opacity: 1;
 }
 
@@ -198,17 +199,6 @@
     height: 70px;
     transform-origin: 50% 50%;
 }
-
-img:not(#logo) {
-    z-index: 1;
-    transition-duration: 0.5s;
-}
-
-/* img:hover:not(#logo){
-    transform-origin: center;
-    transform: scale(1.15);
-    z-index: 2;
-} */
 
 /*Scroll bar*/
 
